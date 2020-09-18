@@ -2,8 +2,11 @@ from PIL import Image, ImageTk
 import tkinter
 import os
 
-os.chdir("E://Jay//New folder")#directory path
 
+root = tkinter.Tk()
+root.geometry("%dx%d+0+0"%(root.winfo_screenwidth(),root.winfo_screenheight()))
+
+os.chdir("E://Jay//New folder")#directory path
 images=os.listdir()
 
 #Importing Photos
@@ -22,12 +25,9 @@ def move(Rd):
     label['image'] = photo
     label.photo = photo
 
-    # label=tkinter.Label(image=photo)
-    # label.pack()
 
 
-root = tkinter.Tk()
-root.geometry("%dx%d+0+0"%(root.winfo_screenwidth(),root.winfo_screenheight()))
+
 label = tkinter.Label(root, compound=tkinter.TOP)
 label.pack()
 
